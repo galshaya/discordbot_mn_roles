@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from discord import Intents, Client, Message, DMChannel, utils
-from keep_alive import keep_alive
+
 
 from responses import get_response
 
@@ -33,12 +33,12 @@ async def send_message(message: Message, user_message: str) -> None:
             if guild:
                 member = guild.get_member(message.author.id)
                 if member:
-                    role = utils.get(guild.roles, name="Red")
+                    role = utils.get(guild.roles, name="mcdh2s2")
                     if role:
                         await member.add_roles(role)
-                        await message.author.send("Role 'seeshidden' has been assigned to you in the server.")
+                        await message.author.send("Role has been assigned to you in the server, enjoy the workshop!")
                     else:
-                        await message.author.send("The 'seeshidden' role doesn't exist in the server. Please contact an administrator.")
+                        await message.author.send("The 'mcdh2s2' role doesn't exist in the server. Please contact an administrator.")
                 else:
                     await message.author.send("You don't seem to be a member of the server. Make sure you've joined the server before using this command.")
             else:
@@ -72,7 +72,6 @@ async def on_message(message: Message) -> None:
 
 # ENTRY POINT
 def main() -> None:
-    keep_alive()
     client.run(TOKEN)
 
 if __name__ == '__main__':
