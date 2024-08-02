@@ -33,12 +33,12 @@ async def send_message(message: Message, user_message: str) -> None:
             if guild:
                 member = guild.get_member(message.author.id)
                 if member:
-                    role = utils.get(guild.roles, name="mcdh2s2")
+                    role = utils.get(guild.roles, name="c&sm1")
                     if role:
                         await member.add_roles(role)
                         await message.author.send("Role has been assigned to you in the server, enjoy the workshop!")
                     else:
-                        await message.author.send("The 'mcdh2s2' role doesn't exist in the server. Please contact an administrator.")
+                        await message.author.send("The 'c&sm1' role doesn't exist in the server. Please contact an administrator.")
                 else:
                     await message.author.send("You don't seem to be a member of the server. Make sure you've joined the server before using this command.")
             else:
