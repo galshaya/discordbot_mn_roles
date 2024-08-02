@@ -14,7 +14,7 @@ def get_response(message_content: str) -> str:
         return 'Here is the current weather information: ...'
     elif lowered.startswith(('what', 'why', 'how')):
         return 'I\'m sorry, I don\'t have the capability to answer questions yet.'
-    elif lowered == 'abracadabra':
+    elif lowered == 'c&sm1':
         return 'COMMAND_GIVE_ROLE'
     else:
         return 'I\'m sorry, I didn\'t understand your message.'
